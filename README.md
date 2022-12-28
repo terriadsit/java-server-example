@@ -11,7 +11,13 @@ Here are some example cURL requests and responses.
 #### Get countries, sorted by name in ascending order 
 
 ```shell
-curl --request GET "http://localhost:3001/countries?sort_by=name&ascending=y"                                   
+curl --request GET "http://localhost:3001/countries?sort_by=name&ascending=y"         
+curl --request GET "http://localhost:3001/countries?sort_by=name&ascending=n" 
+
+curl --request GET "http://localhost:3001/countries?sort_by=gdp&ascending=y" 
+
+curl --request GET "http://localhost:3001/countries?sort_by=population&ascending=y" 
+
 
 {"countries":[{"name":"Afghanistan","code":"AFG","gdp":594.32,"population":32526562,"medals":0},...]}
 ```
