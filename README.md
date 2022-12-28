@@ -14,10 +14,11 @@ Here are some example cURL requests and responses.
 curl --request GET "http://localhost:3001/countries?sort_by=name&ascending=y"         
 curl --request GET "http://localhost:3001/countries?sort_by=name&ascending=n" 
 
-curl --request GET "http://localhost:3001/countries?sort_by=gdp&ascending=y" 
+curl --request GET "http://localhost:3001/countries?sort_by=gdp&ascending=y"
+curl --request GET "http://localhost:3001/countries?sort_by=gdp&ascending=n" 
 
 curl --request GET "http://localhost:3001/countries?sort_by=population&ascending=y" 
-
+curl --request GET "http://localhost:3001/countries?sort_by=population&ascending=n" 
 
 {"countries":[{"name":"Afghanistan","code":"AFG","gdp":594.32,"population":32526562,"medals":0},...]}
 ```
@@ -34,7 +35,12 @@ curl --request GET "http://localhost:3001/countries/united%20states"
 #### Get the list of Gold medal winners for the United States Olympic team, sorted by the athlete's name in descending order
 
 ```shell
-curl --request GET "http://localhost:3001/countries/united%20states/medals?sort_by=name&ascending=n"            
+curl --request GET "http://localhost:3001/countries/united%20states/medals?sort_by=name&ascending=n"      
+
+curl --request GET "http://localhost:3001/countries/united%20states/medals?sort_by=year&ascending=n"     
+
+curl --request GET "http://localhost:3001/countries/united%20states/medals?sort_by=city&ascending=y" 
+
 
 {"medals":[{"year":1968,"city":"Mexico","season":"Summer","name":"ZORN, Zachary","country":"United States","gender":"Men","sport":"Aquatics","discipline":"Swimming","event":"4X100M Freestyle Relay"},...]}
 ```
